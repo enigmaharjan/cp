@@ -45,9 +45,11 @@ if($resultp->num_rows > 0){
 		
 		$p= $prodname['productname'];
 		$sql = "INSERT INTO tbl_confirm VALUES('','$a','$p','$q',$rt, date('Y-m-d H:i:s') ,'Pending')";
+		$sql2 = "INSERT INTO tbl_report VALUES('','$a','$p','$q',$rt, date('Y-m-d H:i:s'))";
 		$sql1 = "DELETE FROM tbl_order WHERE order_id = $pid";
 
 	if($conn->query($sql)===true){
+		if($conn->query($sql2)===true){
 		if($conn->query($sql1)===true){?>
         
 			<script language="javascript">
@@ -57,7 +59,7 @@ if($resultp->num_rows > 0){
 		<?php	
 		
 			
-	}}}}}
+	}}}}}}
 }
 ?>
 </body>

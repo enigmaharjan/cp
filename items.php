@@ -48,17 +48,18 @@ if($_SESSION['uemail']=='shivamaharjan1234567890@gmail.com'){
         <?php
 		$sql = "select * from products";
 		$r = $conn->query($sql);
+		$rs = $conn->query($sql);
 		?>	        
         <table border="1px">
        <?php
-		if(($ra = mysqli_fetch_array($r))>0){
+		if(($ra = mysqli_fetch_array($rs))>0){
 		echo '<tr><td colspan=4 align="center"><b>Available Items</b></td></tr>';
 		echo "<tr><th>Item Name</th> <th>Rate</th><th>Update</th><th>Delete</th></tr>"; 
-		while ($ra = mysqli_fetch_array($r))
+		while ($ras = mysqli_fetch_array($r))
 		{
-			$_SESSION['pid']=$ra["productid"];
-		echo '<tr><td>'. $ra["productname"]. "</td>";
-		echo '<td>' . $ra['rate']?></td><td><a href="items.php?id=<?php echo $_SESSION["pid"]; ?>">Update</a></td>
+			$_SESSION['pid']=$ras["productid"];
+		echo '<tr><td>'. $ras["productname"]. "</td>";
+		echo '<td>' . $ras['rate']?></td><td><a href="items.php?id=<?php echo $_SESSION["pid"]; ?>">Update</a></td>
         <td><a href="items.php?did=<?php echo $_SESSION["pid"]; ?>">Delete</a></td></tr><br>
 		<?php
 		}?>
