@@ -1,8 +1,6 @@
 
 <?php
-if(!isset($_SESSION['uid'])){
-	header('location:login2.php');
-}
+
 include_once("relatedphp/connect.php");
 include_once("index.php");
 

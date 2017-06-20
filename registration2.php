@@ -24,14 +24,16 @@
 <div class="container">
 <div class="jumbotron text-center" >
 <h1>Welcome to Shanti Store</h1>
-</div><div class="row">
-
+</div>
+<div class="row">
 <div class="col-sm-7">
-<?php include_once "relatedphp/register.php";?></div>
+<?php include_once "relatedphp/register.php";?>
+</div>
+<div class="col-md-4" >
+<img src="img/tada.png" class="img-responsive" alt="tada" width="260" height="183">
 </div>
 <?php
 include_once("relatedphp/connect.php");
-
 ?>
 <!--footer-->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

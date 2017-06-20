@@ -1,4 +1,6 @@
-<?php session_start();?>
+<?php 
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -20,9 +22,11 @@
     <![endif]-->
   </head>
   <body>
-   <?php include_once("relatedphp/headernav.php");
-  
-if($_SESSION['uemail']=='shivamaharjan1234567890@gmail.com'){
+   <?php 
+	 include_once("relatedphp/headernav.php");
+	 if(!isset($_SESSION['uemail'])){
+		 $_SESSION['uemail']='q';}
+	 if($_SESSION['uemail']=='shivamaharjan1234567890@gmail.com'){
 				?><div class="container">
 				<div class="jumbotron text-center" >
 				<h1>Welcome to Admin Page</h1>
@@ -53,14 +57,14 @@ if($_SESSION['uemail']=='shivamaharjan1234567890@gmail.com'){
 </div>
 <div class=" col-sm-4">
 <a href="#" class="thumbnail">
-<img src="img/pulses1.jpg" alt="rice"></a>
+<img src="img/pulses.jpg" alt="pulses"></a>
 <h3>Pulses</h3>
 <p>We have got variety of pulses</p>
 <a href="index.php?categoryid=2"><button type="button" class="btn btn-danger">Get Item</button></a>
 </div>
 <div class=" col-sm-4">
 <a href="#" class="thumbnail">
-<img src="img/gas1.jpg" alt="rice"></a>
+<img src="img/gas.jpg" alt="gas"></a>
 <h3>Gas</h3>
 <p>We have got single brand of gas i.e. Sai baba gas</p>
 <a href="index.php?categoryid=3"><button type="button" class="btn btn-danger">Get Item</button></a>
