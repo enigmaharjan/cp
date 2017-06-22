@@ -17,7 +17,7 @@ $r = $conn->query($sql);
 $ru = $conn->query($sql1);
 $rus = mysqli_fetch_array($ru);
 while ($rs = mysqli_fetch_array($r))
-{ ?><div class=" col-sm-4"> <?php
+{ ?><div class="col-sm-4"> <?php
 echo "Item: " . $rs["productname"] . "<br>";
 echo "Rate: Rs." . $rs["rate"] . "/". $rus["categoryunit"] . "<br>";
 echo "Quantity: "."<form method='get' action='addproduct.php'><input type='number' required=required name='quantity'><br/>";

@@ -27,7 +27,7 @@
 </div>
 <div class="row">
 <div class="col-sm-4">
-<img src="img/welcome.jpg" class="img-responsive" alt="Cinque Terre" width="275" height="183">
+<img src="img/welcome.png" class="img-responsive" alt="Cinque Terre" width="275" height="183">
 </div>
 <div class="col-lg-4  " >
  <?php

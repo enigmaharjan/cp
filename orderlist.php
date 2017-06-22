@@ -41,13 +41,17 @@ else{
 				}
 			else{
 			include 'relatedphp/usermenu.php'; }
+			?>
+            </div>
+        <div class="col-sm-5">
+        <?php
 			 if($_SESSION['uemail']=='shivamaharjan1234567890@gmail.com'){
 			$sql="select * from tbl_confirm ";}
 			else{$sql="select * from tbl_confirm where user_id=". $a;}
 			$noitem=$conn->query($sql);
 			if(($rs = mysqli_fetch_array($noitem))>0){
 				$itemsview= $conn->query($sql); ?></div><table border="2px"><?php
-				echo '<tr><td colspan=8 align="center"><b>Ordered List</b></td></tr>';
+				echo '<tr><th colspan=8 align="center"><b>Ordered List</b></th></tr>';
 				echo '<tr><th>Product Name</td>';
 				echo '<th>Quantity</th>';
 				echo '<th>Total</th>';	

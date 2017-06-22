@@ -45,7 +45,7 @@ else{
 	include 'relatedphp/adminmenu.php';
 ?>
 </div>
-<div class="col-m-4">
+<div class="col-sm-5">
 <table border="1px">
 <tr><th  colspan="2" style=" text-align:center">Total Sales</th></tr>
 <tr><th style=" text-align:center">Email</th><th>View Report</th></tr>
@@ -77,7 +77,7 @@ if(isset($_GET['id'])){
 						$username= $user['email'];
 					}
 					?></div><table border="2px"><?php
-				echo '<tr><td colspan=8 align="center"><b>Ordered List</b></td></tr>';
+				echo '<tr><th colspan=8 align="center"><b>Ordered List</b></th></tr>';
 				echo '<tr><th>Product Name</td>';
 				echo '<th>Quantity</th>';
 				echo '<th>Total</th>';	

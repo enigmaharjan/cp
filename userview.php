@@ -41,8 +41,8 @@ if(!isset($_SESSION['uid'])){
  <?php 
  $sql="select * from tbl_user";
  $result=$conn->query($sql);
-?><table border="2px"><?php
-				echo '<tr><td colspan=8 align="center">Registered Profiles</td></tr>';
+?><table border="2px" ><?php
+				echo '<tr><th colspan=8 align="center">Registered Profiles</th></tr>';
 				echo '<tr><th>First Name</td>';
 				echo '<th>Last Name</th>';
 				echo '<th>Address</th>';	

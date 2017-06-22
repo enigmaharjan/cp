@@ -7,25 +7,25 @@ if ($_SERVER["REQUEST_METHOD"] != "POST")
 <form role='form' method="post">
 	<div class="form-group">
     <div class="col-sm-9">
-      <label for="email" >Email</label>
+      <label for="email" >Enter Your Email Here</label>
     </div></div>
   <div class="form-group">
-    <div class="col-sm-8">
+    <div class="col-sm-9">
       <input type="email" name="username" class="form-control" id="inputEmail3" placeholder="Email">
     </div>
   </div>
   <div class="form-group">
     <div class="col-sm-9">
-      <label for="password" >Password</label>
+      <label for="password" style="color:Black"> Enter Your Password Here</label>
     </div></div>
   <div class="form-group">
-    <div class="col-sm-8">
+    <div class="col-sm-9">
       <input type="password" name="password" class="form-control" id="inputPassword3" placeholder="Password">
     </div>
   </div>
   <div class="form-group">
     <div class="col-sm-9">
-      <label for="inputForgetPassword3" ><a href='forgot.php'>Forgot Your Password?</a></label>
+      <label for="inputForgetPassword3"  ><a href='forgot.php' style="color:purple" >Forgot Your Password?</a></label>
     </div>
   </div>
 

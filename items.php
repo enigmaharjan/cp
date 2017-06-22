@@ -53,7 +53,7 @@ if($_SESSION['uemail']=='shivamaharjan1234567890@gmail.com'){
         <table border="1px">
        <?php
 		if(($ra = mysqli_fetch_array($rs))>0){
-		echo '<tr><td colspan=4 align="center"><b>Available Items</b></td></tr>';
+		echo '<tr><th colspan=4 align="center"><b>Available Items</b></th></tr>';
 		echo "<tr><th>Item Name</th> <th>Rate</th><th>Update</th><th>Delete</th></tr>"; 
 		while ($ras = mysqli_fetch_array($r))
 		{

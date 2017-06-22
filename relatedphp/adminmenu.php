@@ -5,7 +5,7 @@
 <title>Untitled Document</title>
 </head>
 
-<body><div class="col-sm-4">
+<body><div  style="background-color:#4CAF50" class="col-sm-4">
 <div  style="font-weight:bold;  font-size:18px">
         <a href="profile.php"> My Profile</a><br/>
         <a href="userview.php">User Profiles</a><br/>
