@@ -68,14 +68,21 @@ if(isset($_POST['update'])){
 				$upid=$uid;
 	$sqlu= "UPDATE tbl_user SET first_name='$fn',email='$e',password='$p',address='$ad',contact='$c',last_name='$ln' where user_id='$upid'";
 	if($conn->query($sqlu)===true){
-	echo "User Edited Successfully!";
+		if($e=='shivamaharjan1234567890@gmail.com'){
 	?>
+	<script language="javascript">
+		alert('Admin Updated Sucessfully');
+		window.location = "profile.php";
+	</script>
+	<?php
+		}elseif($e!='shivamaharjan1234567890@gmail.com'){
+			?>
 	<script language="javascript">
 		alert('User Updated Sucessfully');
 		window.location = "profile.php";
 	</script>
 	<?php
-		}
+		}}
 		else
 			{
 				echo "Error! ".$conn->error;
@@ -92,7 +99,7 @@ $query=$conn->query($check);
 if($query->num_rows > 0){
 	foreach($query as $email){//$query['email'];
 $uemail= $email['email'];}
-// for handling user deletion if it is not admin
+// for handling admin deletion
 	if($uemail=='shivamaharjan1234567890@gmail.com'){	
 	?>
 			<script language="javascript">
@@ -100,7 +107,7 @@ $uemail= $email['email'];}
 			window.location = "userview.php";
 			</script>
 		<?php break;}
-//for handling admin deletion
+//for handling user deletion if it is not admin
 elseif($uemail!='shivamaharjan1234567890@gmail.com'){
 	$delete= "DELETE FROM tbl_user WHERE user_id = $pid";
 if($conn->query($delete))

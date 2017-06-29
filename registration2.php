@@ -29,7 +29,7 @@
 <div class="col-sm-7">
 <?php include_once "relatedphp/register.php";?>
 </div>
-<div class="col-md-4" >
+<div class="col-md-4">
 <img src="img/tada.png" class="img-responsive" alt="tada" width="260" height="183">
 </div>
 <?php

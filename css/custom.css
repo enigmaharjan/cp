@@ -4,8 +4,6 @@
 body{
 	padding-top:70px;
 	padding-bottom:20px;
-	background:url('../img/food.jpg');
-	.background:rgba(51,153,102,1);
 }
 th, td {
     padding: 5px;

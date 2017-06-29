@@ -82,12 +82,21 @@ $r = $conn->query($sqlu);
 	
 	if ($r->num_rows==0)
 		{
-if($conn->query($sql)){
-	echo '<a href="login2.php"><input type="button" class="btn" value="Login Now"></a>';
-	}
+if($conn->query($sql)){?>
+        
+			<script language="javascript">
+			alert('You have Successfully Registered.');
+			window.location = "login2.php";
+			</script>
+		<?php }
 	else{
-	echo 'Email Already Exists '. '<br/>';
-	echo '<a href="registration2.php"><input type="button" class="btn" value="Go Back"></a>';
+	?>
+        
+			<script language="javascript">
+			alert('Email Already Registered.');
+			window.location = "registration2.php";
+			</script>
+		<?php
 }}}
 ?>
 </pre>

@@ -16,6 +16,7 @@ if(!isset($_SESSION['uid'])){
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -67,9 +68,8 @@ if(!isset($_SESSION['uid'])){
 		elseif($_SESSION['uemail']!='shivamaharjan1234567890@gmail.com'){ ?>
 
 <div class="container">
-<div class="jumbotron text-center" >
-<h1>Welcome, <?php echo $_SESSION['ufname']; ?></h1>
-</div>
+<?php include_once("relatedphp/photobanner.php"); ?>
+
 <?php 
 			$_SESSION['ufname'];
 			$a=$_SESSION['uid'];

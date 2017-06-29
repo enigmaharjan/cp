@@ -33,7 +33,7 @@ if($conn->query($delete))
 {?>
         
 			<script language="javascript">
-			alert('Item Updated');
+			alert('Item Deleted');
 			window.location = "items.php";
 			</script>
 		<?php

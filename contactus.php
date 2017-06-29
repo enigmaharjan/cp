@@ -41,21 +41,20 @@ if(!isset($_SESSION['uid'])){
    else{?>
 <div class="container">
 <div class="jumbotron text-center" >
-<h1>Welcome to Shanti Store</h1>
+<h1>We are always with you.</h1>
 </div>
 <div class="row">
-<div class="col-m-4">
+<div class="col-md-4">
 <?php 
-				include_once("relatedphp/usermenu.php");
    }
    ?>
 </div>
 <div class="col-md-4">
 <p align="center" style=" font-weight:bold">We'd LOVE To Help</p>
         <table>
-	    <p><tr><td><img src="img/location.png"/></td><td>&nbsp;</td><td>    <u><strong>Satungal-7, Kathmandu</strong></u></td></tr>
-        <tr><td><img src="img/calling.png"/></td><td>&nbsp;</td><td>    <strong>9802979958, 9843696526 </strong></td></tr>
-        <tr><td><img src="img/mail.png"/></td><td>&nbsp;</td><td>    <strong>shivamaharjan1234567890@gmail.com</strong></td></tr>
+	    <p><tr><td><img src="img/location.png"/></td><td>    <u><strong>Satungal-7, Kathmandu</strong></u></td></tr>
+        <tr><td><img src="img/calling.png"/></td><td>    <strong>9802979958, 9843696526 </strong></td></tr>
+        <tr><td><img src="img/mail.png"/></td><td>    <strong>shivamaharjan1234567890@gmail.com</strong></td></tr>
         </table> 
 </div>
 <?php

@@ -51,6 +51,7 @@ else{
 <tr><th style=" text-align:center">Email</th><th>View Report</th></tr>
 <?php
 	$a=9;
+	$b=1;//for serial number in ordered list.
 	$sql="select * from tbl_user";
 	$res=$conn->query($sql);
 	while($user= mysqli_fetch_array($res)){
@@ -65,6 +66,13 @@ if(isset($_GET['id'])){
 		$sqlp= "SELECT * FROM tbl_report WHERE user_id= '$pid'";
 		$resultp= $conn->query($sqlp);
 		if($resultp->num_rows > 0){
+			?></div><table border="2px"><?php
+				echo '<tr><th colspan=8 align="center"><b>Ordered List</b></th></tr>';
+				echo '<tr><th>S.N.</th>';
+				echo '<th>Product Name</th>';
+				echo '<th>Quantity</th>';
+				echo '<th>Total</th>';	
+				echo '<th>Date</th></tr>';
 				foreach($resultp as $valuep){
 					$ui = $valuep['user_id'];
 					$pi = $valuep['productname'];
@@ -74,19 +82,15 @@ if(isset($_GET['id'])){
 					$sqlu="SELECT * FROM tbl_user WHERE user_id= '$ui'";
 					$res=$conn->query($sql);
 					while($user= mysqli_fetch_array($res)){
+						
 						$username= $user['email'];
 					}
-					?></div><table border="2px"><?php
-				echo '<tr><th colspan=8 align="center"><b>Ordered List</b></th></tr>';
-				echo '<tr><th>Product Name</td>';
-				echo '<th>Quantity</th>';
-				echo '<th>Total</th>';	
-				echo '<th>Date</th></tr>';
-				
-				echo '<tr><td>'.$valuep['productname'].'<br>';	
+					echo '<tr><td>'.$b.'</td>';
+				echo '<td>'.$valuep['productname'].'<br>';	
 				echo '</td><td>'.$valuep['quantity'].'<br>';
 				echo '</td><td>'.$valuep['total_price'];
 				echo '</td><td>'.$valuep['order_date'].'</td></tr>';
+				$b=$b+1;
 					 
 	}} 
 	else {

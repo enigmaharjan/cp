@@ -13,6 +13,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -22,12 +23,14 @@
     <![endif]-->
   </head>
   <body>
-   <?php 
+  <?php 
 	 include_once("relatedphp/headernav.php");
 	 if(!isset($_SESSION['uemail'])){
 		 $_SESSION['uemail']='q';}
 	 if($_SESSION['uemail']=='shivamaharjan1234567890@gmail.com'){
-				?><div class="container">
+				?>
+                
+                <div class="container">
 				<div class="jumbotron text-center" >
 				<h1>Welcome to Admin Page</h1>
 				</div>
@@ -42,7 +45,7 @@
 <div class="jumbotron text-center" >
 <h1>Welcome to Shanti Store</h1>
 </div>
-
+<?php include_once("relatedphp/photobanner.php"); ?>
 <div class="row">
 <div class="col-sm-4">
 <a href="#" class="thumbnail">
