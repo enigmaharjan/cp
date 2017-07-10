@@ -61,7 +61,6 @@ else{
 					 echo '<th>Delete</th>';
 					 echo '<th>User Email</th></tr>';
 					 }
-				
 				while ($items = mysqli_fetch_array($itemsview)){
 				echo '<tr><td>'.$items['productname'].'<br>';	
 				echo '</td><td>'.$items['quantity'].'<br>';
@@ -77,7 +76,7 @@ else{
 					echo '<th><a href="orderlist.php?c_did='.$items['c_id'].'">Delete</a></th>';
 					echo '<td>'.$email.'</td></tr>';
 					}?></td></tr><br>
-		<?php			
+		<?php
 				}
 				echo'</table>';
 				include 'relatedphp/serviceupdate.php';
