@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php session_start(); ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -30,9 +30,9 @@
                  <li><a href="profile.php">My Profile</a></li><?php }?>
         <li><a href="cart.php">My Cart</a></li>
         <li><a href="contactus.php">Contact Us</a></li>
-        <li><a href=<?php if(!isset($_SESSION['uemail'])){
-		 $_SESSION['uemail']='q';}
-	 if($_SESSION['uemail']=='shivamaharjan1234567890@gmail.com'){?>"AdminHelp.docx"<?php } else { ?>"UserHelp.docx"<?php } ?>>Help</a></li>
+        <li><?php if(isset($_SESSION['uemail'])){
+		 
+	 if($_SESSION['uemail']=='shivamaharjan1234567890@gmail.com'){?><a href="help2.docx"><?php }} else { ?><a href="help2.docx"><?php } ?>Help</a></li>
         <?php if(!isset($_SESSION['uid'])){
 			?> <li><a href="login2.php">Login</a></li> <?php
 				}
